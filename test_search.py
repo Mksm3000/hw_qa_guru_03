@@ -8,6 +8,8 @@ def test_google():
 
 
 def test_wrong_request():
+    # gaga - crazy or foolish
+    gaga = '+_+_*!&@^#%$#@^!'
     browser.open('https://duckduckgo.com')
-    browser.element('[name="q"]').should(be.blank).type('+_+_*!&@^#%$#@^!').press_enter()
-    browser.element('[id="react-layout"]').should(have.text('результаты не найдены'))
+    browser.element('[name="q"]').should(be.blank).type(gaga).press_enter()
+    browser.element('[id="react-layout"]').should(have.text(gaga))
